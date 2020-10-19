@@ -9,7 +9,9 @@
   https://hub.docker.com/_/mongo
 
 - Ver qué parámetros necesito para crearlo
+
   `docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=1234 --name mymongo mongo`
+
 - Acceder a través del CLI para mongo y crear una colección llamada books con este formato {name: 'Kubernetes in Action', author: 'Marko Luksa'} en la base de datos test
 
   Nos conectamos al contenedor vía bash
