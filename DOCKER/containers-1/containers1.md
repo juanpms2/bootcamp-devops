@@ -37,6 +37,8 @@
 
 - Ver los logs de tu nuevo mongo
 
+  `docker logs mymongo`
+
 - Descargar MongoDB Compass (https://www.mongodb.com/try/download/compass)
 
 - Accede a tu MongoDB en Docker con la siguiente cadena de conexión: mongodb://mongoadmin:secret@localhost:27017 y tus credenciales:
@@ -61,6 +63,10 @@
 - Crea un servidor Nginx llamado lemoncoders-web y copia el contenido de la carpeta lemoncoders-web en la ruta que sirve este servidor web.
 
   `docker run -d --name lemoncoders-web -p 9090:80 nginx`
+
+  `docker cp lemoncoders-web/. lemoncoders-web:/usr/share/nginx/html/`
+
+  `docker exec lemoncoders-web ls /usr/share/nginx/html/`
 
 - Ejecuta dentro del contenedor la acción ls, para comprobar que los archivos se han copiado correctamente.
 
